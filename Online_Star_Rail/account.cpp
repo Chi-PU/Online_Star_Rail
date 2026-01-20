@@ -1,17 +1,8 @@
 #include "account.h"
 
-class Account {
-public:
-	std::string getUsername() const {
-		return username;
-	}
+Account::Account(const std::string& user, const std::string& pass):
+	username(user), password(pass) {
+}
 
-	std::string getPassword() const {
-		return password;
-	}
-
-
-private:
-	std::string username;
-	std::string password;
-};
+std::string Account::getUsername() const { return ""; }
+std::string Account::getPassword() const { return ""; }

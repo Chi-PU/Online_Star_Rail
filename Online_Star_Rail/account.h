@@ -8,14 +8,10 @@ private:
 			std::string username;
 			std::string password;
 public:
-	Account(const std::string& user, const std::string& pass)
-				: username(user), password(pass) {}
-	std::string getUsername() const {
-				return username;
-			}
-	std::string getPassword() const {
-				return password;
-			}
+	Account(const std::string& user, const std::string& pass);
+	std::string getUsername() const;
+	std::string getPassword() const;
+			
 };
 
 #endif // !ACCOUNT_H
