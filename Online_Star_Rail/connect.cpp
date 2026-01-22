@@ -1,124 +1,105 @@
 #include <iostream>
-
+#include <cstring>
 #define PORT 8080
 const char* server_ip = "172.27.201.62";
+#include "json.h"
 
 #if defined(_WIN32) || defined(_WIN64)
-// Windows implementation
 #include <winsock2.h>
 #include <ws2tcpip.h>
-#include <windows.h>
 #pragma comment(lib, "ws2_32.lib")
+typedef SOCKET socket_t;
+#define INVALID_SOCK INVALID_SOCKET
+#else
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <unistd.h>
+#include <netdb.h>
+typedef int socket_t;
+#define INVALID_SOCK -1
+#define closesocket close
+#endif
 
-int close_socket(SOCKET& sock) {
-    // Close socket
-    closesocket(sock);
+
+
+void close_socket(socket_t sock) {
+    if (sock != INVALID_SOCK) {
+        closesocket(sock);
+    }
+#if defined(_WIN32) || defined(_WIN64)
     WSACleanup();
-    return 0;
+#endif
 }
 
-int start_socket() {
-    WSADATA wsaData;
-    SOCKET sock = INVALID_SOCKET;
-    struct sockaddr_in serv_addr;
-    const char* hello = "Hello from client";
 
-    // Initialize Winsock
+int start_socket() {
+#if defined(_WIN32) || defined(_WIN64)
+    // Initialize Winsock (Windows only)
+    WSADATA wsaData;
     if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0) {
         std::cerr << "WSAStartup failed" << std::endl;
         return -1;
     }
+#endif
 
-    // Create socket
-    sock = socket(AF_INET, SOCK_STREAM, 0);
-    if (sock == INVALID_SOCKET) {
-        std::cerr << "Socket creation error" << std::endl;
+    struct addrinfo hints, * res, * p;
+    socket_t sock = INVALID_SOCK;
+    
+
+    // Setup hints for getaddrinfo
+    memset(&hints, 0, sizeof(hints));
+    hints.ai_family = AF_UNSPEC;      // IPv4 or IPv6
+    hints.ai_socktype = SOCK_STREAM;  // TCP
+
+    // Get address info
+    char port_str[6];
+    snprintf(port_str, sizeof(port_str), "%d", PORT);
+
+    if (getaddrinfo(server_ip, port_str, &hints, &res) != 0) {
+        std::cerr << "getaddrinfo failed" << std::endl;
+#if defined(_WIN32) || defined(_WIN64)
         WSACleanup();
+#endif
         return -1;
     }
 
-    serv_addr.sin_family = AF_INET;
-    serv_addr.sin_port = htons(PORT);
+    // Try each address until we successfully connect
+    for (p = res; p != NULL; p = p->ai_next) {
+        // Create socket
+        sock = socket(p->ai_family, p->ai_socktype, p->ai_protocol);
+        if (sock == INVALID_SOCK) {
+            continue;
+        }
 
-    // Convert IPv4 address from text to binary
-    if (inet_pton(AF_INET, server_ip, &serv_addr.sin_addr) <= 0) {
-        std::cerr << "Invalid address/ Address not supported" << std::endl;
+        // Connect to server
+        if (connect(sock, p->ai_addr, p->ai_addrlen) == 0) {
+            break;  // Success
+        }
+
         closesocket(sock);
-        WSACleanup();
-        return -1;
+        sock = INVALID_SOCK;
     }
 
-    // Connect to server
-    if (connect(sock, (struct sockaddr*)&serv_addr, sizeof(serv_addr)) < 0) {
-        std::cerr << "Connection Failed" << std::endl;
-        closesocket(sock);
+	freeaddrinfo(res); //Free the address info list
+
+    if (sock == INVALID_SOCK) {
+        std::cerr << "Connection failed" << std::endl;
+#if defined(_WIN32) || defined(_WIN64)
         WSACleanup();
+#endif
         return -1;
     }
+    //Build json 
+	SimpleJSON json;
+	json.add("action", "greet");
 
+	//Get JSON string
+	std::string json_str = json.build();
     // Send data
-    send(sock, hello, strlen(hello), 0);
-    std::cout << "Message sent" << std::endl;
+    send(sock, json_str.c_str(), json_str.length(), 0);
+    std::cout << "Message sent" <<json_str<< std::endl;
 
     close_socket(sock);
-
     return 0;
 }
-
-
-
-#else
-// Unix/Linux implementation
-#include <arpa/inet.h>
-#include <netinet/in.h>
-#include <sys/socket.h>
-#include <unistd.h>
-#include <cstring>
-
-int close_socket(SOCKET& sock) {
-    // Close socket
-    close(sock);
-    return 0;
-}
-
-int start_socket() {
-    int sock = 0;
-    struct sockaddr_in serv_addr;
-    const char* hello = "Hello from client";
-
-    // Create socket
-    sock = socket(AF_INET, SOCK_STREAM, 0);
-    if (sock < 0) {
-        std::cerr << "Socket creation error" << std::endl;
-        return -1;
-    }
-
-    serv_addr.sin_family = AF_INET;
-    serv_addr.sin_port = htons(PORT);
-
-    // Convert IPv4 address from text to binary
-    if (inet_pton(AF_INET, server_ip, &serv_addr.sin_addr) <= 0) {
-        std::cerr << "Invalid address/ Address not supported" << std::endl;
-        close(sock);
-        return -1;
-    }
-
-    // Connect to server
-    if (connect(sock, (struct sockaddr*)&serv_addr, sizeof(serv_addr)) < 0) {
-        std::cerr << "Connection Failed" << std::endl;
-        close(sock);
-        return -1;
-    }
-
-    // Send data
-    send(sock, hello, strlen(hello), 0);
-    std::cout << "Message sent" << std::endl;
-
-	close_socket(sock);
-
-    return 0;
-}
-
-
-
-#endif

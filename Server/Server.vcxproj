@@ -18,11 +18,18 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Online_Star_Rail\server.cpp" />
+    <ClCompile Include="auth.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="global.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{c4f7b8c6-35da-45e0-b499-6a816725f8c9}</ProjectGuid>
-    <RootNamespace>OnlineStarRail</RootNamespace>
+    <ProjectGuid>{b99f8183-08fe-4779-910d-edbf99a8be93}</ProjectGuid>
+    <RootNamespace>Server</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -102,7 +109,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\openssl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -123,25 +129,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="auth.cpp" />
-    <ClCompile Include="characters.cpp" />
-    <ClCompile Include="connect.cpp" />
-    <ClCompile Include="data.cpp" />
-    <ClCompile Include="json.cpp" />
-    <ClCompile Include="menu.cpp" />
-    <ClCompile Include="Online_Star_Rail.cpp" />
-    <ClCompile Include="ssl.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="account.h" />
-    <ClInclude Include="auth.h" />
-    <ClInclude Include="characters.h" />
-    <ClInclude Include="connect.h" />
-    <ClInclude Include="data.h" />
-    <ClInclude Include="json.h" />
-    <ClInclude Include="menu.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
