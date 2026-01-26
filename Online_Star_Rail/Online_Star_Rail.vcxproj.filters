@@ -27,9 +27,6 @@
     <ClCompile Include="characters.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="connect.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="auth.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -39,7 +36,10 @@
     <ClCompile Include="json.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="connection_manager.cpp">
+    <ClCompile Include="socket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="connect_manager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -56,16 +56,16 @@
     <ClInclude Include="characters.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="connect.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="auth.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="json.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="connection_manager.h">
+    <ClInclude Include="socket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="connect_manager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
