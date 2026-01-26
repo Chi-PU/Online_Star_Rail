@@ -1,3 +1,4 @@
+#pragma once
 #include <string>
 #include <sstream>
 #include <map>
@@ -11,6 +12,7 @@ private:
     std::string escape_string(const std::string& str);
 
 public:
+
     // Add string value
     void add(const std::string& key, const std::string& value);
 

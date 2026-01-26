@@ -1,7 +1,10 @@
+
+/*
+
 #include <iostream>
 #include <cstring>
 #define PORT 8080
-const char* server_ip = "172.27.201.62";
+#include "connect.h"
 #include "json.h"
 
 #if defined(_WIN32) || defined(_WIN64)
@@ -20,9 +23,6 @@ typedef int socket_t;
 #define INVALID_SOCK -1
 #define closesocket close
 #endif
-
-
-
 
 void close_socket(socket_t sock) {
     if (sock != INVALID_SOCK) {
@@ -104,3 +104,4 @@ int start_socket() {
     close_socket(sock);
     return 0;
 }
+*/

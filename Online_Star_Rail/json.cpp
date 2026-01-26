@@ -1,8 +1,7 @@
 #include "json.h"
 
 
-    std::map<std::string, std::string> data;
-
+   
     // Escape special characters in strings
     std::string SimpleJSON::escape_string(const std::string& str) {
         std::string result;

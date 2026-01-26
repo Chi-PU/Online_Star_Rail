@@ -1,0 +1,28 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36" version="29.3.1">
+  <diagram name="Page-1" id="_8gC8H7Dz29qlqvqUCFy">
+    <mxGraphModel dx="1042" dy="562" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="UoFBZslLqBH_pnnvJRB_-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="login time" vertex="1">
+          <mxGeometry height="60" width="120" x="305" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="UoFBZslLqBH_pnnvJRB_-3" edge="1" parent="1" source="UoFBZslLqBH_pnnvJRB_-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="UoFBZslLqBH_pnnvJRB_-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UoFBZslLqBH_pnnvJRB_-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="user&amp;nbsp;" vertex="1">
+          <mxGeometry height="60" width="120" x="110" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="UoFBZslLqBH_pnnvJRB_-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="storage" vertex="1">
+          <mxGeometry height="60" width="120" x="250" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="UoFBZslLqBH_pnnvJRB_-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="character" vertex="1">
+          <mxGeometry height="60" width="120" x="370" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="UoFBZslLqBH_pnnvJRB_-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="currency" vertex="1">
+          <mxGeometry height="60" width="120" x="230" y="540" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

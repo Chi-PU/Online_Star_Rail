@@ -102,11 +102,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\openssl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\openssl\include;C:\Program Files\PostgreSQL\18\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Program Files\PostgreSQL\18\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libpq.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -127,6 +129,7 @@
     <ClCompile Include="auth.cpp" />
     <ClCompile Include="characters.cpp" />
     <ClCompile Include="connect.cpp" />
+    <ClCompile Include="connection_manager.cpp" />
     <ClCompile Include="data.cpp" />
     <ClCompile Include="json.cpp" />
     <ClCompile Include="menu.cpp" />
@@ -138,6 +141,7 @@
     <ClInclude Include="auth.h" />
     <ClInclude Include="characters.h" />
     <ClInclude Include="connect.h" />
+    <ClInclude Include="connection_manager.h" />
     <ClInclude Include="data.h" />
     <ClInclude Include="json.h" />
     <ClInclude Include="menu.h" />
