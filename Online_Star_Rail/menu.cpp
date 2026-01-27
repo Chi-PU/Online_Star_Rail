@@ -18,7 +18,7 @@ void displayCharacters() {
 void displayMenu() {
 	int x;
 	cout << "1. Enter Shop" << endl;
-	cout << "2. Open Daily" << endl;
+	cout << "2. Do Daily" << endl;
 	cout << "3. Open Characters" << endl;
 	cout << "4. Exit Game" << endl;
 	cin >> x;

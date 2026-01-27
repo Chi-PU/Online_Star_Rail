@@ -1,0 +1,8 @@
+Phase 1:
+Mission statement: store and track user data and activity
+Mission objectives:
+- securely store users' password and data
+- log users' activity
+- device played on
+- when activity is done
+- 
