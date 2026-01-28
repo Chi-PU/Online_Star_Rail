@@ -131,7 +131,6 @@
     <ClCompile Include="connect_manager.cpp" />
     <ClCompile Include="socket.cpp" />
     <ClCompile Include="data.cpp" />
-    <ClCompile Include="json.cpp" />
     <ClCompile Include="menu.cpp" />
     <ClCompile Include="Online_Star_Rail.cpp" />
     <ClCompile Include="ssl.cpp" />
@@ -143,7 +142,6 @@
     <ClInclude Include="connect_manager.h" />
     <ClInclude Include="socket.h" />
     <ClInclude Include="data.h" />
-    <ClInclude Include="json.h" />
     <ClInclude Include="menu.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
