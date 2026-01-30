@@ -1,0 +1,67 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36" version="29.3.4">
+  <diagram name="Page-1" id="EyDKlJxMZEd6udbE9aUz">
+    <mxGraphModel dx="1489" dy="1903" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="zktDAeOo1g8K1H4SpD69-1" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="ConnectionManager" vertex="1">
+          <mxGeometry height="140" width="160" x="370" y="-40" as="geometry" />
+        </mxCell>
+        <mxCell id="zktDAeOo1g8K1H4SpD69-2" parent="zktDAeOo1g8K1H4SpD69-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ field: type" vertex="1">
+          <mxGeometry height="26" width="160" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="zktDAeOo1g8K1H4SpD69-3" parent="zktDAeOo1g8K1H4SpD69-1" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="160" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="zktDAeOo1g8K1H4SpD69-4" parent="zktDAeOo1g8K1H4SpD69-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ method(type): type" vertex="1">
+          <mxGeometry height="80" width="160" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zktDAeOo1g8K1H4SpD69-25" edge="1" parent="1" source="zktDAeOo1g8K1H4SpD69-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="zktDAeOo1g8K1H4SpD69-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zktDAeOo1g8K1H4SpD69-5" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Socket" vertex="1">
+          <mxGeometry height="260" width="260" x="80" y="234" as="geometry" />
+        </mxCell>
+        <mxCell id="zktDAeOo1g8K1H4SpD69-6" parent="zktDAeOo1g8K1H4SpD69-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;font&gt;&lt;span class=&quot;token&quot;&gt;-&lt;/span&gt; sock_&lt;span class=&quot;token&quot;&gt;:&lt;/span&gt; socket_t&lt;br&gt;&lt;span class=&quot;token&quot;&gt;-&lt;/span&gt; wsa_instance_count_&lt;span class=&quot;token&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token&quot;&gt;int&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="44" width="260" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="zktDAeOo1g8K1H4SpD69-7" parent="zktDAeOo1g8K1H4SpD69-5" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="260" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="zktDAeOo1g8K1H4SpD69-8" parent="zktDAeOo1g8K1H4SpD69-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;font&gt;&lt;span class=&quot;token&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token&quot;&gt;Socket&lt;/span&gt;&lt;span class=&quot;token&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token&quot;&gt;)&lt;/span&gt;&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font&gt;&lt;span class=&quot;token&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;token&quot;&gt;Socket&lt;/span&gt;&lt;span class=&quot;token&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token&quot;&gt;)&lt;/span&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&gt;&lt;span class=&quot;token&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token&quot;&gt;Socket&lt;/span&gt;&lt;span class=&quot;token&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token&quot;&gt;const&lt;/span&gt; Socket&lt;span class=&quot;token&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;token&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token&quot;&gt;delete&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&gt;&lt;span class=&quot;token&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token&quot;&gt;operator&lt;/span&gt;&lt;span class=&quot;token&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token&quot;&gt;const&lt;/span&gt; Socket&lt;span class=&quot;token&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;token&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token&quot;&gt;delete&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token&quot;&gt;Socket&lt;/span&gt;&lt;span class=&quot;token&quot;&gt;(&lt;/span&gt;Socket&lt;span class=&quot;token&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class=&quot;token&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token&quot;&gt;noexcept&lt;/span&gt;&amp;nbsp;&lt;br&gt;&lt;span class=&quot;token&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token&quot;&gt;operator&lt;/span&gt;&lt;span class=&quot;token&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token&quot;&gt;(&lt;/span&gt;Socket&lt;span class=&quot;token&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class=&quot;token&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token&quot;&gt;noexcept&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;token&quot;&gt;(&lt;/span&gt;host&lt;span class=&quot;token&quot;&gt;:&lt;/span&gt; string&lt;span class=&quot;token&quot;&gt;,&lt;/span&gt; port&lt;span class=&quot;token&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;token&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token&quot;&gt;void&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;token&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token&quot;&gt;:&lt;/span&gt; string&lt;span class=&quot;token&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token&quot;&gt;void&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token&quot;&gt;receive&lt;/span&gt;&lt;span class=&quot;token&quot;&gt;(&lt;/span&gt;buffer_size&lt;span class=&quot;token&quot;&gt;:&lt;/span&gt; size_t&lt;span class=&quot;token&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token&quot;&gt;:&lt;/span&gt; string&lt;br&gt;&lt;span class=&quot;token&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token&quot;&gt;is_connected&lt;/span&gt;&lt;span class=&quot;token&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token&quot;&gt;bool&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&gt;&lt;span class=&quot;token&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token&quot;&gt;close_socket&lt;/span&gt;&lt;span class=&quot;token&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token&quot;&gt;void&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="182" width="260" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="zktDAeOo1g8K1H4SpD69-9" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="SQLServer" vertex="1">
+          <mxGeometry height="140" width="160" x="370" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="zktDAeOo1g8K1H4SpD69-10" parent="zktDAeOo1g8K1H4SpD69-9" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ field: type" vertex="1">
+          <mxGeometry height="26" width="160" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="zktDAeOo1g8K1H4SpD69-11" parent="zktDAeOo1g8K1H4SpD69-9" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="160" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="zktDAeOo1g8K1H4SpD69-12" parent="zktDAeOo1g8K1H4SpD69-9" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ method(type): type" vertex="1">
+          <mxGeometry height="80" width="160" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zktDAeOo1g8K1H4SpD69-26" edge="1" parent="1" source="zktDAeOo1g8K1H4SpD69-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="zktDAeOo1g8K1H4SpD69-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zktDAeOo1g8K1H4SpD69-21" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="SimpleJSON" vertex="1">
+          <mxGeometry height="200" width="250" x="640" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="zktDAeOo1g8K1H4SpD69-22" parent="zktDAeOo1g8K1H4SpD69-21" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- data: map&amp;lt;string, string&amp;gt;" vertex="1">
+          <mxGeometry height="34" width="250" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="zktDAeOo1g8K1H4SpD69-23" parent="zktDAeOo1g8K1H4SpD69-21" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="250" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zktDAeOo1g8K1H4SpD69-24" parent="zktDAeOo1g8K1H4SpD69-21" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ add(key: string, value: string): void&amp;nbsp;&lt;div&gt;+ add(key: string, value: const char*): void&lt;br/&gt;+ add(key: string, value: int): void&lt;br/&gt;+ add(key: string, value: bool): void&lt;br/&gt;+ add_null(key: string): void&lt;br/&gt;+ build(): string&lt;br/&gt;+ clear(): void&lt;br/&gt;- escape_string(str: string): string&lt;/div&gt;" vertex="1">
+          <mxGeometry height="132" width="250" y="68" as="geometry" />
+        </mxCell>
+        <mxCell id="zktDAeOo1g8K1H4SpD69-27" edge="1" parent="1" source="zktDAeOo1g8K1H4SpD69-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.46;entryY=0.988;entryDx=0;entryDy=0;entryPerimeter=0;" target="zktDAeOo1g8K1H4SpD69-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
